@@ -1,13 +1,4 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="./output.css" rel="stylesheet">
-  </head>
-  <body>
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,11 +7,10 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-[#F8F9FA] text-[#1A1D1F] font-['Plus_Jakarta_Sans',sans-serif]">
+<body class="bg-[#F8F9FA] text-[#1A1D1F]">
 
     <div class="flex h-screen overflow-hidden">
-    
-        <!-- Sidebar -->
+        
         <aside class="w-64 bg-white border-r border-[#EFEFEF] hidden md:flex flex-col justify-between p-6">
             <div>
                 <div class="flex items-center gap-3 px-2 mb-8">
@@ -62,10 +52,8 @@
             </div>
         </aside>
 
-        <!-- Main Content Area -->
         <div class="flex-1 flex flex-col overflow-y-auto">
             
-            <!-- Header -->
             <header class="h-16 bg-white border-b border-[#EFEFEF] flex items-center justify-between px-6 lg:px-8 sticky top-0 z-10">
                 <div class="flex items-center gap-4">
                     <h2 class="text-sm font-bold text-[#1A1D1F] md:block hidden">Customer Workspace</h2>
@@ -83,10 +71,8 @@
                 </div>
             </header>
 
-            <!-- Main Body -->
             <main class="p-6 lg:p-8 max-w-7xl w-full mx-auto space-y-8">
                 
-                <!-- Welcome Banner -->
                 <div class="bg-white border border-[#EFEFEF] p-6 rounded-2xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 shadow-sm">
                     <div>
                         <h1 class="text-2xl font-bold tracking-tight text-[#1A1D1F]">Welcome back, Safwan! 👋</h1>
@@ -97,41 +83,111 @@
                     </button>
                 </div>
 
-                <!-- Stats Grid -->
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-[#EFEFEF] shadow-sm flex items-center justify-between">
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-[#9A9FA5] uppercase tracking-wider">Total Orders</span>
+                            <h3 class="text-3xl font-bold text-[#1A1D1F]">24</h3>
+                            <span class="text-xs text-[#83BF6E] font-medium">↑ 12% from last month</span>
+                        </div>
+                        <div class="w-12 h-12 bg-[#2A85FF]/10 text-[#2A85FF] rounded-xl flex items-center justify-center text-xl font-bold">📦</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-[#EFEFEF] shadow-sm flex items-center justify-between">
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-[#9A9FA5] uppercase tracking-wider">Wishlist Items</span>
+                            <h3 class="text-3xl font-bold text-[#1A1D1F]">08</h3>
+                            <span class="text-xs text-[#6F767E] font-medium">Ready to checkout</span>
+                        </div>
+                        <div class="w-12 h-12 bg-[#FF6A55]/10 text-[#FF6A55] rounded-xl flex items-center justify-center text-xl font-bold">❤️</div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-[#EFEFEF] shadow-sm flex items-center justify-between">
+                        <div class="space-y-1">
+                            <span class="text-xs font-semibold text-[#9A9FA5] uppercase tracking-wider">Wallet Balance</span>
+                            <h3 class="text-3xl font-bold text-[#1A1D1F]">$540.25</h3>
+                            <span class="text-xs text-[#2A85FF] font-medium">Earned 50 points</span>
+                        </div>
+                        <div class="w-12 h-12 bg-[#83BF6E]/10 text-[#83BF6E] rounded-xl flex items-center justify-center text-xl font-bold">💵</div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
                     
-                    <div class="bg-white border border-[#EFEFEF] p-6 rounded-2xl shadow-sm">
-                        <p class="text-sm font-semibold text-[#6F767E]">Total Loss</p>
-                        <h3 class="text-3xl font-bold text-[#1A1D1F] my-2">♾️</h3>
-                        <p class="text-xs text-[#9A9FA5]">Lorem ipsum dolor sit amet.</p>
+                    <div class="lg:col-span-2 bg-white rounded-2xl border border-[#EFEFEF] shadow-sm overflow-hidden">
+                        <div class="px-6 py-5 border-b border-[#EFEFEF] flex justify-between items-center">
+                            <h3 class="font-bold text-[#1A1D1F] text-lg">Recent Transactions</h3>
+                            <button class="text-sm font-semibold text-[#2A85FF] hover:underline">View All</button>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full text-left border-collapse">
+                                <thead>
+                                    <tr class="bg-[#F4F4F4]/60 text-[#6F767E] text-xs font-semibold uppercase tracking-wider">
+                                        <th class="px-6 py-4">Product ID</th>
+                                        <th class="px-6 py-4">Date</th>
+                                        <th class="px-6 py-4">Status</th>
+                                        <th class="px-6 py-4 text-right">Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-[#EFEFEF] text-sm text-[#1A1D1F]">
+                                    <tr class="hover:bg-[#F4F4F4]/30 transition">
+                                        <td class="px-6 py-4 font-semibold text-[#1A1D1F]">#ORD-73921</td>
+                                        <td class="px-6 py-4 text-[#6F767E]">Jun 26, 2026</td>
+                                        <td class="px-6 py-4">
+                                            <span class="px-2.5 py-1 text-xs font-semibold text-[#83BF6E] bg-[#83BF6E]/10 rounded-lg">Completed</span>
+                                        </td>
+                                        <td class="px-6 py-4 text-right font-bold text-[#1A1D1F]">$89.00</td>
+                                    </tr>
+                                    <tr class="hover:bg-[#F4F4F4]/30 transition">
+                                        <td class="px-6 py-4 font-semibold text-[#1A1D1F]">#ORD-52104</td>
+                                        <td class="px-6 py-4 text-[#6F767E]">Jun 22, 2026</td>
+                                        <td class="px-6 py-4">
+                                            <span class="px-2.5 py-1 text-xs font-semibold text-[#2A85FF] bg-[#2A85FF]/10 rounded-lg">In Transit</span>
+                                        </td>
+                                        <td class="px-6 py-4 text-right font-bold text-[#1A1D1F]">$142.50</td>
+                                    </tr>
+                                    <tr class="hover:bg-[#F4F4F4]/30 transition">
+                                        <td class="px-6 py-4 font-semibold text-[#1A1D1F]">#ORD-10932</td>
+                                        <td class="px-6 py-4 text-[#6F767E]">Jun 15, 2026</td>
+                                        <td class="px-6 py-4">
+                                            <span class="px-2.5 py-1 text-xs font-semibold text-[#FF6A55] bg-[#FF6A55]/10 rounded-lg">Cancelled</span>
+                                        </td>
+                                        <td class="px-6 py-4 text-right font-bold text-[#1A1D1F]">$24.00</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
 
-                    <div class="bg-white border border-[#EFEFEF] p-6 rounded-2xl shadow-sm">
-                        <p class="text-sm font-semibold text-[#6F767E]">Total Spent</p>
-                        <h3 class="text-3xl font-bold text-[#1A1D1F] my-2">$500.00</h3>
-                        <p class="text-xs text-[#83BF6E]">▲ +12% from last month</p>
-                    </div>
-
-                    <div class="bg-white border border-[#EFEFEF] p-6 rounded-2xl shadow-sm">
-                        <p class="text-sm font-semibold text-[#6F767E]">Active Orders</p>
-                        <h3 class="text-3xl font-bold text-[#1A1D1F] my-2">10</h3>
-                        <p class="text-xs text-[#2A85FF]">In transit</p>
+                    <div class="bg-white rounded-2xl border border-[#EFEFEF] shadow-sm p-6 space-y-6">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-[#1A1D1F] text-lg">Default Address</h3>
+                            <button class="text-sm font-semibold text-[#2A85FF] hover:underline">Manage</button>
+                        </div>
+                        <div class="bg-[#F4F4F4]/50 border border-[#EFEFEF] p-4 rounded-xl space-y-2 text-sm text-[#1A1D1F]">
+                            <div class="flex items-center gap-2">
+                                <span class="font-bold text-xs bg-[#1A1D1F] text-white px-2 py-0.5 rounded">HOME</span>
+                            </div>
+                            <p class="font-semibold pt-1">Alfaz Ahmed</p>
+                            <p class="text-[#6F767E] leading-relaxed">House #12, Road #4, Sector #11<br>Uttara, Dhaka - 1230</p>
+                            <p class="text-xs text-[#9A9FA5] pt-2">📞 +880 1704460982</p>
+                        </div>
+                        
+                        <div class="pt-2">
+                            <div class="flex justify-between items-center text-xs font-semibold mb-2">
+                                <span class="text-[#6F767E]">Profile Completion</span>
+                                <span class="text-[#2A85FF]">85%</span>
+                            </div>
+                            <div class="w-full bg-[#F4F4F4] h-2 rounded-full overflow-hidden">
+                                <div class="bg-[#2A85FF] h-full w-[85%] rounded-full"></div>
+                            </div>
+                        </div>
                     </div>
 
                 </div>
 
-                <!-- Table Section -->
-
-                <div class="justify-center flex bg-blue-200 rounded-2xl p-4">
-                    <img src="graph.png" alt="" class="w-80 text-center text-5xl">
-                   
-                </div>
             </main>
-
         </div>
+
     </div>
 
 </body>
-</html>
-  </body>
 </html>
